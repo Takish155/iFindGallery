@@ -1,11 +1,6 @@
-import { AppBar, Button, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import CollectionsIcon from "@mui/icons-material/Collections";
-import { NavLink, useNavigate } from "react-router-dom";
-
-const navLink = {
-  marginRight: "1rem",
-  fontSize: "1rem",
-};
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const navigate = useNavigate();
