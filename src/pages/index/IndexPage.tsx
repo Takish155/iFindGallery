@@ -1,14 +1,13 @@
 import { Grid } from "@mui/material";
-import React from "react";
 import { HeroSection } from "./section/HeroSection";
-import { SearchSection } from "./section/SearchSection";
+import { IndexPhotoSection } from "./section/IndexPhotoSection";
 
 export const IndexPage = () => {
   return (
-    <main className=" pt-32">
+    <main className="pt-32">
       <Grid container>
         <HeroSection />
-        <SearchSection />
+        <IndexPhotoSection />
       </Grid>
     </main>
   );
