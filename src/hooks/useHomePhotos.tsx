@@ -1,4 +1,4 @@
-import { QueryFunctionContext, useInfiniteQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
 
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -61,7 +61,7 @@ export const useHomePhotos = () => {
   return useInfiniteQuery({
     queryKey: ["homePhotos"],
     queryFn: fetchData,
-    getNextPageParam: (lastPage, allPages) => allPages.length + 1,
+    getNextPageParam: (_, allPages) => allPages.length + 1,
     staleTime: Infinity,
     refetchOnWindowFocus: false,
     initialPageParam: 1,

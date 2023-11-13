@@ -36,7 +36,7 @@ export const useSearchPhotos = () => {
     useInfiniteQuery({
       queryKey: ["searchData", searchQuery],
       queryFn: fetchData,
-      getNextPageParam: (lastPage, allPages) => allPages.length + 1,
+      getNextPageParam: (_, allPages) => allPages.length + 1,
       initialPageParam: 1,
       staleTime: Infinity,
       refetchOnWindowFocus: false,

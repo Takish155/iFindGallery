@@ -31,7 +31,7 @@ export const useUserWorks = () => {
     queryKey: ["userWorks", username],
     queryFn: fetchData,
     initialPageParam: 1,
-    getNextPageParam: (lastPage, allPages) => allPages.length + 1,
+    getNextPageParam: (_, allPages) => allPages.length + 1,
     staleTime: Infinity,
     refetchOnWindowFocus: false,
   });
