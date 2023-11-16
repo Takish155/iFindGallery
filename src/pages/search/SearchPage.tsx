@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { PhotoSection } from "../../components/PhotoSection";
 import { SearchSection } from "../../components/SearchSection";
 import { useSearchPhotos } from "../../hooks/useSearchPhotos";
@@ -11,6 +12,11 @@ export const SearchPage = () => {
     isFetchingNextPage,
     isError,
   } = useSearchPhotos();
+
+  useEffect(() => {
+    document.title = `"${searchQuery}" search | iFindGallery`;
+  });
+
   return (
     <main className="pt-32">
       <section className="w-11/12 mx-auto">
